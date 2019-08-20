@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>git | seeingvoice</title>
+  <meta name="description" content>
+  <meta name="keywords" content>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="seeingvoice">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000Linus在1991年创建了开源的LinuxCVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://yoursite.com/2019/08/20/git/index.html">
+<meta property="og:site_name" content="seeingvoice">
+<meta property="og:description" content="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000Linus在1991年创建了开源的LinuxCVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-08-20T06:04:26.128Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000Linus在1991年创建了开源的LinuxCVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+</html>
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				seeingvoice
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								Home
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								Archives
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-gallery' href='https://photos.google.com/album/AF1QipNoqKYgspQo5O1YhlFXGCQ7p575KBH3Yxf8WHL4?hl=zh-CN'>
+								Gallery
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								About
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				Home
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				Archives
+			</a>
+		
+			<a href="https://photos.google.com/album/AF1QipNoqKYgspQo5O1YhlFXGCQ7p575KBH3Yxf8WHL4?hl=zh-CN" class="nav-gallery nav">
+				Gallery
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				About
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-git"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2019/08/20/git/">
+    	git
+    </a>
+  </h2>
+	<time>
+	  Aug 20, 2019
+	</time>
+	
+	</section>
+	
+		<section class="toc-wrapper"></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000</a><br>Linus在1991年创建了开源的Linux<br>CVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中式的版本控制系统不但速度慢，而且必须联网才能使用。有一些商用的版本控制系统，虽然比CVS、SVN好用，但那是付费的，和Linux的开源精神不符。</p>
+<a id="more"></a>
+<p>2002年，Linux系统已经发展了十年了，代码库之大让Linus很难继续通过手工方式管理了，社区的弟兄们也对这种方式表达了强烈不满，于是Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。<br>安定团结的大好局面在2005年就被打破了，原因是Linux社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发Samba的Andrew试图破解BitKeeper的协议（这么干的其实也不只他一个），被BitMover公司发现了（监控工作做得不错！），于是BitMover公司怒了，要收回Linux社区的免费使用权。Linus可以向BitMover公司道个歉，保证以后严格管教弟兄们，嗯，这是不可能的。实际情况是这样的：<br>Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了！牛是怎么定义的呢？大家可以体会一下。Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitHub网站上线了，它为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub，包括jQuery，PHP，Ruby等等。<br>ls –ah<br>Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates. These variables can be stored in three different places:<br>    1. /etc/gitconfig file: Contains values applied to every user on the system and all their repositories. If you pass the option –system to git config, it reads and writes from this file specifically. (Because this is a system configuration file, you would need administrative or superuser privilege to make changes to it.)<br>    2. ~/.gitconfig or ~/.config/git/config file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the –global option, and this affects all of the repositories you work with on your system.<br>    3. config file in the Git directory (that is, .git/config) of whatever repository you’re currently using: Specific to that single repository. You can force Git to read from and write to this file with the –local option, but that is in fact the default. (Unsurprisingly, you need to be located somewhere in a Git repository for this option to work properly.)<br>If you want to check your configuration settings, you can use the git config –list command to list all the settings Git can find at that point:<br>$ git config –list<br>user.name=John Doe<br>user.email=johndoe@example.com<br>color.status=auto<br>color.branch=auto<br>color.interactive=auto<br>color.diff=auto</p>
+<p>Git 里面的 origin 到底代表啥意思?</p>
+<p>作者：田雅文<br>链接：<a href="https://www.zhihu.com/question/27712995/answer/39946123" target="_blank" rel="noopener">https://www.zhihu.com/question/27712995/answer/39946123</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>你的代码库(repository)可以存放在你的电脑里，同时你也可以把代码库托管到Github的服务器上。在默认情况下，origin指向的就是你本地的代码库托管在Github上的版本。我们假设你首先在github上创建了一个Repository，叫做repository，假设你的Github ID是user1,这个时候指向你的代码库的链接是<br><a href="https://github.com/user1/repository" target="_blank" rel="noopener">https://github.com/user1/repository</a><br>如果你在terminal里输入<br>git clone <a href="https://github.com/user1/repository" target="_blank" rel="noopener">https://github.com/user1/repository</a><br>那么git就会在本地拷贝一份托管在github上的代码库这个时候你cd到repository然后输入<br>git remote -v<br>你会看到控制台输出<br>origin <a href="https://github.com/user1/repository.git" target="_blank" rel="noopener">https://github.com/user1/repository.git</a> (fetch)<br>origin <a href="https://github.com/user1/repository.git" target="_blank" rel="noopener">https://github.com/user1/repository.git</a> (push)<br>也就是说git为你默认创建了一个指向远端代码库的origin（因为你是从这个地址clone下来的）再假设现在有一个用户user2 fork了你个repository，那么他的代码库链接就是这个样子<br><a href="https://github.com/user2/repository" target="_blank" rel="noopener">https://github.com/user2/repository</a><br>如果他也照着这个clone一把，然后在他的控制台里输入git remote -v<br>他会看的的就是<br>origin <a href="https://github.com/user2/repository.git" target="_blank" rel="noopener">https://github.com/user2/repository.git</a> (fetch)<br>origin <a href="https://github.com/user2/repository.git" target="_blank" rel="noopener">https://github.com/user2/repository.git</a> (push)<br>可以看的origin指向的位置是user2的的远程代码库这个时候，如果user2想加一个远程指向你的代码库，他可以在控制台输入<br>git remote add upstream <a href="https://github.com/user1/repository.git" target="_blank" rel="noopener">https://github.com/user1/repository.git</a><br>然后再输入一遍 git remote -v输出结果就会变为<br>origin <a href="https://github.com/user2/repository.git" target="_blank" rel="noopener">https://github.com/user2/repository.git</a> (fetch)<br>origin <a href="https://github.com/user2/repository.git" target="_blank" rel="noopener">https://github.com/user2/repository.git</a> (push)<br>upstream <a href="https://github.com/user1/repository.git" target="_blank" rel="noopener">https://github.com/user1/repository.git</a> (push)<br>upstream <a href="https://github.com/user1/repository.git" target="_blank" rel="noopener">https://github.com/user1/repository.git</a> (push)<br>增加了指向user1代码库的upstream，也就是之前对指向位置的命名。总结来讲，顾名思义，origin就是一个名字，它是在你clone一个托管在Github上代码库时，git为你默认创建的指向这个远程代码库的标签， @陈肖恩的答案并不准确，origin指向的是repository，master只是这个repository中默认创建的第一个branch。当你git push的时候因为origin和master都是默认创建的，所以可以这样省略，但是这个是bad practice，因为当你换一个branch再git push的时候，有时候就纠结了</p>
+
+  	</div>
+	  
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2019/08/20/Speech Recognition Document/" rel="prev"  title="Speech Recognition Document">
+						Speech Recognition Document 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2019/08/20/Win10+Ubuntu18.04 UEFI启动 双硬盘/" rel="next"  title="ubuntu18.04安装ibus拼音输入">
+						ubuntu18.04安装ibus拼音输入
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: 'git',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<div class='header'>i5misswrong</div>
+<div class='content'>
+<div class='desc'>Tempora mutantur, nos et mutamur in illis ...</div>
+</div>
+</section>
+
+  <section class='m_widget links'>
+<div class='header'>Links</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://ccoooss.com">
+            <div class='name'>ClassicOldSong</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://frantic1048.logdown.com/">
+            <div class='name'>Frantic1048</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://hclmaster.github.io/">
+            <div class='name'>Hclmaster</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://whst.github.io/">
+            <div class='name'>WANG Hsü-Tung</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+  <section class='m_widget categories'>
+<div class='header'>Categories</div>
+<div class='content'>
+    
+</div>
+</section>
+
+  
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/stkevintan" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+        <a href="https://twitter.com/kevinsfork" class="social twitter"
+          target="_blank" rel="external">
+          <span class="icon icon-twitter"></span>
+        </a>
+      
+        <a href="/atom.xml" class="social rss"
+          target="_blank" rel="external">
+          <span class="icon icon-rss"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
